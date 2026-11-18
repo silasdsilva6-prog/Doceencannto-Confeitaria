@@ -1,13 +1,19 @@
 /* ===== CORES E FONTES DA MARCA (identidade visual) ===== */
+
+
+
 :root {
-  --roxo: #4a1d5e;
-  --roxo-claro: #efe6f3;
-  --verde: #2e7d32;
-  --creme: #f7f3ea;
-  --texto: #222222;
-  --erro: #b3261e;
-  --fonte: Arial, Helvetica, sans-serif;
+  --rosa: #F4DDE1;
+  --rosa-claro: #FAEEF0;
+  --marrom: #8B5E52;
+  --chocolate: #4A2925;
+  --creme: #F7F0E5;
+  --texto: #3D302D;
+  --branco: #FFFFFF;
 }
+
+
+
 
 * {
   box-sizing: border-box;
