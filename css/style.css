@@ -279,3 +279,180 @@ address {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* =========================================
+   PARTE 2 - IDENTIDADE VISUAL DOCE ENCANTO
+   Melhorias de aparência e responsividade
+   ========================================= */
+
+/* Fontes e aparência geral */
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  padding: 16px 24px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.marca {
+  font-size: 23px;
+  letter-spacing: 0.5px;
+}
+
+.menu a {
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+  opacity: 0.8;
+}
+
+/* Seção inicial */
+.inicio {
+  padding: 70px 20px;
+}
+
+.inicio h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+}
+
+.inicio p {
+  max-width: 650px;
+  margin: 0 auto 24px;
+  font-size: 17px;
+}
+
+/* Botões */
+.botao {
+  border-radius: 25px;
+  padding: 12px 28px;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos das seções */
+.secao h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 24px;
+}
+
+/* Filtros do catálogo */
+.filtro {
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.filtro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+}
+
+/* Cartões dos produtos */
+.card {
+  padding: 18px;
+  border-radius: 16px;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin-top: 14px;
+  font-size: 19px;
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+/* Formulário */
+.formulario {
+  gap: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 13px;
+  transition: box-shadow 0.2s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  box-shadow: 0 0 0 3px rgba(139, 94, 82, 0.15);
+}
+
+/* Rodapé */
+.rodape {
+  padding: 28px 20px;
+  line-height: 1.8;
+}
+
+/* Melhorias para celular */
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 14px 16px;
+  }
+
+  .marca {
+    font-size: 20px;
+  }
+
+  .inicio {
+    padding: 50px 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .formulario .botao {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Respeita usuários que preferem menos animação */
+@media (prefers-reduced-motion: reduce) {
+  .botao,
+  .filtro,
+  .card,
+  .menu a,
+  .formulario input,
+  .formulario textarea {
+    transition: none;
+  }
+
+  .botao:hover,
+  .filtro:hover,
+  .card:hover {
+    transform: none;
+  }
+}
