@@ -11,6 +11,7 @@ botoesFiltro.forEach(function (botao) {
       if (filtro === "todos" || card.dataset.categoria === filtro) {
         card.hidden = false;
       } else {
+        
         card.hidden = true;
       }
     });
